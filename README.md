@@ -1,1 +1,1 @@
-# **Learning map with flask**
+# **Simple Project**
