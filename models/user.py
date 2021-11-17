@@ -43,7 +43,7 @@ class UserModel(db.Model):
     # def get_all_user(cls):
     #     return cls.query.all()
 
-    def get_all_user(self):
+    def get_all_user():
         sql = "select uid, name, role from user"
 
         return db.engine.execute(sql).fetchall()

@@ -15,6 +15,6 @@ def create_app(config_name):
     db.init_app(app)
     ma.init_app(app)
     migrate.init_app(app, db)
-    # cache.init_app(app)
+    cache.init_app(app)
 
     return app

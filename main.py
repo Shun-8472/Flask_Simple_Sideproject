@@ -1,4 +1,3 @@
-# from flask_caching import Cache
 from app import create_app
 from flask_restful import Api
 from resources.user import User, Users
@@ -17,15 +16,3 @@ api.add_resource(Products, "/products")
 
 api.add_resource(AddToCar, "/addToCar/<int:addToCar_Id>")
 api.add_resource(AddToCars, "/addToCars")
-
-
-
-# redis here
-# cache = Cache(app)
-# @app.route('/')
-# @cache.cached(timeout=50, key_prefix='product')
-# def index():
-#     product = {
-#         "message": "Internal Server Error"
-#     }
-#     return product

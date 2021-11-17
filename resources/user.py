@@ -2,6 +2,7 @@ from flask import request
 from flask_restful import Resource, abort
 from marshmallow import ValidationError
 
+from common.rd import cache
 from common.bcrypt import bcrypt
 from common.jwt import create_access_token, create_refresh_token
 
@@ -49,6 +50,7 @@ class User(Resource):
 class Users(Resource):
 
     # @jwt_required()
+    @cache.cached(timeout=50, key_prefix='users')
     def get(self):
         # current_user = get_jwt_identity()
         result = UserModel.get_all_user()
