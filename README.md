@@ -10,5 +10,10 @@ Use technology:
 - MySQL
 ```
 
+Next Step:
+```
+- Data Sharding (Horizontal Scaling)
+```
+
 System Design:
 ![image](images/system_design.png)
