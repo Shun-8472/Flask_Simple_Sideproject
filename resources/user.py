@@ -1,3 +1,4 @@
+import random
 from flask import request
 from flask_restful import Resource, abort
 from marshmallow import ValidationError
@@ -86,9 +87,9 @@ class Users(Resource):
 
         result['password'] = bcrypt.generate_password_hash(result['password']).decode('utf8')
         user = UserModel(result["name"], result["password"], result["role"])
-        user.add_user()
+        user.update_user()
 
         return {
-            'message': 'Insert user success',
+            'message': 'Update user success',
             'post_data': user_schema.dump(result)
         }, 201

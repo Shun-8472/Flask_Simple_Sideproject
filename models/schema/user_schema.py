@@ -8,6 +8,6 @@ class UserSchema(ma.SQLAlchemyAutoSchema):
     uid = fields.Int()
     name = fields.Str(required = True)
     password = fields.Str(required = True, validate=[validate.Length(min=6, max=36)])
-    role = fields.Str(required = True)
+    role = fields.Str()
     # insert_time = fields.DateTime()
     # update_time = fields.DateTime()
