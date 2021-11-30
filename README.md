@@ -39,6 +39,8 @@ Add to car:
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `GET`    | `/addToCars/{userId}`                    | Retrieve users cars #userId.             |
 | `POST`   | `/addToCars/{userId}`                    | Create a new users cars #userId.         |
+| `GET`    | `/addToCar/{addToCar_Id}`                | Retrieve cars #addToCar_Id.              |
+| `PUT`    | `/addToCar/{addToCar_Id}`                | Update data in cars #addToCar_Id.        |
 
 
 ## HTTP Response Status Codes

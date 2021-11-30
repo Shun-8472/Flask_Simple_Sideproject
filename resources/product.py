@@ -32,6 +32,12 @@ class Product(Resource):
                 'message': 'Product not exist!'
             }, 403
 
+        product.name = result["name"]
+        product.price = result["price"]
+        product.img = result["img"]
+        product.description = result["description"]
+        product.state = result["state"]
+        
         product.update_product()
 
         return {
