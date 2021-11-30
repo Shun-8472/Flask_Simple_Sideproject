@@ -25,20 +25,20 @@ User:
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `POST`   | `/users/SignIn`                          | User SignIn.                             |
 | `POST`   | `/users/SignUp`                          | User SignUp.                             |
-| `PUT`    | `/users/{userId}`                        | Update data in users #userId.            |
+| `PUT`    | `/users/{user_Id}`                        | Update data in users #userId.           |
 
 Product:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `GET`    | `/products`                              | Retrieve all products.                   |
-| `GET`    | `/product/{productId}`                   | Retrieve products #productId.            |
-| `PUT`    | `/product/{productId}`                   | Update data in products #productId.      |
+| `GET`    | `/product/{product_Id}`                  | Retrieve products #productId.            |
+| `PUT`    | `/product/{product_Id}`                  | Update data in products #productId.      |
 
 Add to car:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
-| `GET`    | `/addToCars/{userId}`                    | Retrieve users cars #userId.             |
-| `POST`   | `/addToCars/{userId}`                    | Create a new users cars #userId.         |
+| `GET`    | `/addToCars/{user_Id}`                   | Retrieve users cars #user_Id.            |
+| `POST`   | `/addToCars/{user_Id}`                   | Create a new users cars #user_Id.        |
 | `GET`    | `/addToCar/{addToCar_Id}`                | Retrieve cars #addToCar_Id.              |
 | `PUT`    | `/addToCar/{addToCar_Id}`                | Update data in cars #addToCar_Id.        |
 
