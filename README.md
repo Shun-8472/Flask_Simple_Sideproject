@@ -38,7 +38,7 @@ Add to car:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `GET`    | `/addToCars/<int:user_id>`               | Retrieve users cars #userId.             |
-| `POST`   | `/addToCars/<int:user_id>`               | Create users cars #userId.               |
+| `POST`   | `/addToCars/<int:user_id>`               | Create a new users cars #userId.         |
 
 
 ## HTTP Response Status Codes
