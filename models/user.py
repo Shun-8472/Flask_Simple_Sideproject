@@ -39,11 +39,11 @@ class UserModel(db.Model):
     def user_login(cls, user_name):
         return cls.query.filter_by(name=user_name).first()
 
-    # @classmethod
-    # def get_all_user(cls):
-    #     return cls.query.all()
+    @classmethod
+    def get_all_user(cls):
+        return cls.query.all()
 
-    def get_all_user():
-        sql = "select uid, name, role from user"
+    # def get_all_user():
+    #     sql = "select uid, name, role from user"
 
-        return db.engine.execute(sql).fetchall()
+    #     return db.engine.execute(sql).fetchall()
