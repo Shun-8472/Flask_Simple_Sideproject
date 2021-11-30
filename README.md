@@ -37,8 +37,8 @@ Product:
 Add to car:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
-| `GET`    | `/addToCars/<int:user_id>`               | Retrieve users cars #userId.             |
-| `POST`   | `/addToCars/<int:user_id>`               | Create a new users cars #userId.         |
+| `GET`    | `/addToCars/{userId}`                    | Retrieve users cars #userId.             |
+| `POST`   | `/addToCars/{userId}`                    | Create a new users cars #userId.         |
 
 
 ## HTTP Response Status Codes
