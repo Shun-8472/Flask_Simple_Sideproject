@@ -20,12 +20,19 @@ System Design:
 ![image](images/system_design.png)
 
 ## API
-
+User:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `POST`   | `/users/SignIn`                          | User SignIn.                             |
 | `POST`   | `/users/SignUp`                          | User SignUp.                             |
-| `POST`   | `/users/{userId}`                        | User update information.                 |
+| `POST`   | `/users/{userId}`                        | Update data in users #userId.            |
+
+Product:
+| Method   | URL                                      | Description                              |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| `GET`    | `/products`                              | Retrieve all products.                   |
+| `GET`    | `/product/{productId}`                   | Retrieve products #productId.            |
+| `PUT`    | `/product/{productId}`                   | Update data in products #productId.      |
 
 
 ## HTTP Response Status Codes
