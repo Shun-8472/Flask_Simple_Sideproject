@@ -31,8 +31,8 @@ Product:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `GET`    | `/products`                              | Retrieve all products.                   |
-| `GET`    | `/product/{product_Id}`                  | Retrieve products #productId.            |
-| `PUT`    | `/product/{product_Id}`                  | Update data in products #productId.      |
+| `GET`    | `/product/{product_Id}`                  | Retrieve products #product_Id.           |
+| `PUT`    | `/product/{product_Id}`                  | Update data in products #product_Id.     |
 
 Add to car:
 | Method   | URL                                      | Description                              |
