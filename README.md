@@ -19,10 +19,9 @@ System Design:
 ![image](images/system_design.png)
 
 API:
-```
+
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `POST`   | `/users/SignIn`                          | User SignIn.                             |
 | `POST`   | `/users/SignUp`                          | User SignUp.                             |
 | `POST`   | `/users/{userId}`                        | User update information.                 |
-```
