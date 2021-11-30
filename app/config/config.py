@@ -17,7 +17,7 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_ECHO = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:password@ip:port/database_name'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Q7q9q1q2q1q3@localhost:3306/spring'
     # SQLALCHEMY_ENGINE_OPTIONS = {
     #     "pool_pre_ping": True,
     #     "pool_recycle": 300,
@@ -26,9 +26,11 @@ class DevelopmentConfig(BaseConfig):
     #     'max_overflow': 5,
     # }
     JWT_SECRET_KEY = 'change_key_here'
+    JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(minutes=30)
     CACHE_TYPE = 'redis'
-    CACHE_REDIS_HOST = 'ip'
-    CACHE_REDIS_PORT = 'port'
+    CACHE_REDIS_HOST = '127.0.0.1'
+    CACHE_REDIS_PORT = '6379'
+    CACHE_REDIS_DB = '0'
 
 
 class TestingConfig(BaseConfig):
