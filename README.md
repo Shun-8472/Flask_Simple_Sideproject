@@ -25,7 +25,7 @@ User:
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `POST`   | `/users/SignIn`                          | User SignIn.                             |
 | `POST`   | `/users/SignUp`                          | User SignUp.                             |
-| `POST`   | `/users/{userId}`                        | Update data in users #userId.            |
+| `PUT`    | `/users/{userId}`                        | Update data in users #userId.            |
 
 Product:
 | Method   | URL                                      | Description                              |

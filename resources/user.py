@@ -26,14 +26,14 @@ class UserSignUp(Resource):
         }, 201
 
 class UserUpdate(Resource):
-    def get(self, user_Id):
-        user = UserModel.get_user(user_Id)
+    # def get(self, user_Id):
+    #     user = UserModel.get_user(user_Id)
 
-        if not user:
-            return {
-                'message': 'User not exist!'
-            }, 403
-        return user_schema.dump(user)
+    #     if not user:
+    #         return {
+    #             'message': 'User not exist!'
+    #         }, 403
+    #     return user_schema.dump(user)
 
     def put(self, user_Id):
         result = user_sign_schema.load(request.json)
