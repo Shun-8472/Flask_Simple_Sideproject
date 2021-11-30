@@ -34,6 +34,12 @@ Product:
 | `GET`    | `/product/{productId}`                   | Retrieve products #productId.            |
 | `PUT`    | `/product/{productId}`                   | Update data in products #productId.      |
 
+Add to car:
+| Method   | URL                                      | Description                              |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| `GET`    | `/addToCars/<int:user_id>`               | Retrieve users cars #userId.             |
+| `POST`   | `/addToCars/<int:user_id>`               | Create users cars #userId.               |
+
 
 ## HTTP Response Status Codes
 
