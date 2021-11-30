@@ -34,5 +34,9 @@ class AddToCarModel(db.Model):
         return cls.query.filter_by(pid=addToCar_Id).first()
 
     @classmethod
-    def get_all_addToCars(cls):
-        return cls.query.all()
+    def get_all_addToCars(cls, user_Id):
+        return cls.query.filter_by(uid=user_Id).all()
+
+    @classmethod
+    def is_addToCars_exist(cls, user_Id, product_id):
+        return cls.query.filter_by(uid=user_Id, pid=product_id).first()

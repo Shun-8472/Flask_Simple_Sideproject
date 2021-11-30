@@ -41,19 +41,27 @@ class AddToCar(Resource):
 
 class AddToCars(Resource):
 
-    def get(self):
-        result = AddToCarModel.get_all_addToCars()
+    def get(self, user_id):
+        result = AddToCarModel.get_all_addToCars(user_id)
         if not result:
-            abort(404, message="Could not find user list")
+            abort(404, message="Could not find list")
         return addToCars_schema.dump(result)
 
-    def post(self):
+    def post(self, user_id):
+        request.json["uid"] = int(user_id)
         result = addToCar_schema.load(request.json)
 
-        product = AddToCarModel(result["name"], result["price"], result["img"], result["description"], result["state"])
-        product.add_product()
+        addToCar = AddToCarModel(result["uid"], result["pid"], result["quantity"], result["state"])
+        car = addToCar.is_addToCars_exist(user_id, result["pid"])
+        if car:
+            return {
+                'message': 'Car is exist',
+                'data': addToCar_schema.dump(car)
+            }, 201
 
+        addToCar.add_addToCar()
+        car = addToCar.is_addToCars_exist(user_id, result["pid"])
         return {
-            'message': 'Insert user success',
-            'post_data': addToCar_schema.dump(result)
+            'message': 'Insert cars success',
+            'post_data': addToCar_schema.dump(car)
         }, 201

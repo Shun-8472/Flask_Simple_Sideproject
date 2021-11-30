@@ -9,7 +9,9 @@ class AddToCarSchema(ma.SQLAlchemyAutoSchema):
         model = AddToCarModel
     id = fields.Int()
     quantity = fields.Str(required = True)
-    state = fields.Str(required = True, validate=[validate.Length(min=6, max=36)])
+    state = fields.Str(required = True)
+    uid = fields.Int(required = True)
+    pid = fields.Int(required = True)
     user = fields.Nested(UserSchema)
     product = fields.Nested(ProductSchema)
     insert_time = fields.Str()
