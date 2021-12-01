@@ -30,7 +30,7 @@ class DevelopmentConfig(BaseConfig):
     CACHE_TYPE = 'redis'
     CACHE_REDIS_HOST = 'HOST'
     CACHE_REDIS_PORT = 'PORT'
-    CACHE_REDIS_DB = 'DB'
+    CACHE_REDIS_DB = '0'
 
 
 class TestingConfig(BaseConfig):
