@@ -25,7 +25,7 @@ User:
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `POST`   | `/users/SignIn`                          | User SignIn.                             |
 | `POST`   | `/users/SignUp`                          | User SignUp.                             |
-| `PUT`    | `/users/{user_Id}`                        | Update data in users #userId.           |
+| `PUT`    | `/users/{user_Id}`                       | Update data in users #userId.            |
 
 Product:
 | Method   | URL                                      | Description                              |
@@ -42,6 +42,21 @@ Add to car:
 | `GET`    | `/addToCar/{addToCar_Id}`                | Retrieve cars #addToCar_Id.              |
 | `PUT`    | `/addToCar/{addToCar_Id}`                | Update data in cars #addToCar_Id.        |
 
+Tweets:
+| Method   | URL                                      | Description                              |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| `GET`    | `/tweets?limit=10&page=4`                | Retrieve page 4 of the tweets with 10 tweets per page.|
+| `GET`    | `/tweets/{user_Id}?limit=10&page=4`      | Retrieve page 4 of the tweets for #user_Id with 10 tweets per page.|
+| `POST`   | `/tweets/{user_Id}`                      | Create a new tweets #user_Id.            |
+| `GET`    | `/tweet/{tweet_Id}`                      | Retrieve tweets #tweet_Id.               |
+| `PUT`    | `/tweet/{tweet_Id}`                      | Update data in tweets #tweet_Id.         |
+
+Follow:
+| Method   | URL                                      | Description                              |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| `GET`    | `/followers/{user_Id}`                   | Retrieve users following #user_Id.       |
+| `POST`   | `/followers/{user_Id}`                   | Create a new users following #user_Id.   |
+| `DELETE` | `/followers/{user_Id}`                   | Delete users following #user_Id.         |
 
 ## HTTP Response Status Codes
 
