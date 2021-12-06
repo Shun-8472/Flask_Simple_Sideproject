@@ -42,14 +42,14 @@ Add to car:
 | `GET`    | `/addToCar/{addToCar_Id}`                | Retrieve cars #addToCar_Id.              |
 | `PUT`    | `/addToCar/{addToCar_Id}`                | Update data in cars #addToCar_Id.        |
 
-Tweets:
+Twitters:
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
-| `GET`    | `/tweets?limit=10&page=4`                | Retrieve page 4 of the tweets with 10 tweets per page.|
-| `GET`    | `/tweets/{user_Id}?limit=10&page=4`      | Retrieve page 4 of the tweets for #user_Id with 10 tweets per page.|
-| `POST`   | `/tweets/{user_Id}`                      | Create a new tweets #user_Id.            |
-| `GET`    | `/tweet/{tweet_Id}`                      | Retrieve tweets #tweet_Id.               |
-| `PUT`    | `/tweet/{tweet_Id}`                      | Update data in tweets #tweet_Id.         |
+| `GET`    | `/twitters?limit=10&page=4`              | Retrieve page 4 of the twitters with 10 twitters per page.|
+| `GET`    | `/twitters/{user_Id}?limit=10&page=4`    | Retrieve page 4 of the twitters for #user_Id with 10 twitters per page.|
+| `POST`   | `/twitters/{user_Id}`                    | Create a new twitters #user_Id.            |
+| `GET`    | `/twitter/{twitter_Id}`                  | Retrieve twitters #twitter_Id.               |
+| `PUT`    | `/twitter/{twitter_Id}`                  | Update data in twitters #twitter_Id.         |
 
 Follow:
 | Method   | URL                                      | Description                              |
