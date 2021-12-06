@@ -1,12 +1,11 @@
-from os import name
 from common.ma import ma
 from marshmallow import validate, fields
-from models.tweet import TweetModel
+from models.twitter import TwitterModel
 from models.schema.user_schema import UserSchema
 
-class TweetSchema(ma.SQLAlchemyAutoSchema):
+class TwitterSchema(ma.SQLAlchemyAutoSchema):
     class Mate:
-        model = TweetModel
+        model = TwitterModel
     id = fields.Int()
     uid = fields.Int(required = True)
     name = fields.Str()

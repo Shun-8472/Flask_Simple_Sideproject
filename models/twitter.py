@@ -4,8 +4,8 @@ from datetime import datetime
 
 from models.follower import FollowerModel
 
-class TweetModel(db.Model):
-    __tablename__ = 'tweet'
+class TwitterModel(db.Model):
+    __tablename__ = 'twitter'
     id = db.Column(db.Integer, primary_key=True)
     message = db.Column(db.String(220), unique=True, nullable=False)
     create_date = db.Column(db.DateTime, default=datetime.now)
@@ -19,36 +19,36 @@ class TweetModel(db.Model):
         self.uid = uid
         self.message = message
 
-    def add_tweet(self):
+    def add_twitter(self):
         db.session.add(self)
         db.session.flush()
         db.session.commit()
         return self.id
 
-    def update_tweet(self):
+    def update_twitter(self):
         db.session.commit()
 
-    def delete_tweet(self):
+    def delete_twitter(self):
         db.session.delete(self)
         db.session.commit()
 
     @classmethod
-    def get_tweet_byId(cls, tweet_id):
-        return cls.query.filter_by(id=tweet_id)
+    def get_twitter_byId(cls, twitter_id):
+        return cls.query.filter_by(id=twitter_id)
 
     @classmethod
-    def get_tweet_wall(cls, offset, limit):
+    def get_twitter_wall(cls, offset, limit):
         return cls.query.order_by(cls.update_date.desc()).limit(limit).offset(offset)
 
     # @classmethod
-    # def get_person_wall(cls, tweet_id, offset, limit):
-    #     return cls.query.select_from(FollowerModel).filter(FollowerModel.uid_1 == tweet_id, FollowerModel.uid_2 == cls.uid | (cls.uid==tweet_id))\
+    # def get_person_wall(cls, twitter_id, offset, limit):
+    #     return cls.query.select_from(FollowerModel).filter(FollowerModel.uid_1 == twitter_id, FollowerModel.uid_2 == cls.uid | (cls.uid==twitter_id))\
     #                     .order_by(cls.update_date.desc()).limit(limit).offset(offset)
 
     @classmethod
-    def get_person_wall(cls, tweet_id, offset, limit):
-        return cls.query.filter_by(uid=tweet_id).order_by(cls.update_date.desc()).limit(limit).offset(offset)
+    def get_person_wall(cls, twitter_id, offset, limit):
+        return cls.query.filter_by(uid=twitter_id).order_by(cls.update_date.desc()).limit(limit).offset(offset)
         
     @classmethod
-    def get_tweet(cls, tweet_id, page, limit):
-        return cls.query.filter_by(uid=tweet_id).paginate(page=page, per_page=limit).items
+    def get_twitter(cls, twitter_id, page, limit):
+        return cls.query.filter_by(id=twitter_id).paginate(page=page, per_page=limit).items
